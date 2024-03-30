@@ -2,10 +2,10 @@
 GRADE_SALARY = {'A': 1000000, 'B': 1500000, 'C': 2000000}
 
 # define the allowance percentage for each grade
-GRADE_ALLOWANCE = {'A': 0.05, 'B': 0.15, 'C': 0.25}
+GRADE_ALLOWANCE = {'A': [0.05, 0.15, 0.25], 'B': [0.15, 0.30, 0.45], 'C': [0.25, 0.35, 0.45]}
 
-# define the overtime pay per hour for each grade
-GRADE_OVERTIME_PAY = {'A': 20000, 'B': 25000, 'C': 30000}
+# define the overtime pay per hour
+OVERTIME_PAY = 2000, 25000, 30000
 
 # get the input from the user
 name = input("Nama: ")
@@ -16,13 +16,16 @@ total_work_hours = int(input("Total Jam Kerja: "))
 # calculate the base salary based on the grade
 salary = GRADE_SALARY[grade]
 
-# calculate the allowance based on the grade
-allowance = GRADE_ALLOWANCE[grade] * salary
+# calculate the allowance based on the grade and work experience
+if work_experience > 5:
+    allowance = GRADE_ALLOWANCE[grade][2] * salary
+else:
+    allowance = GRADE_ALLOWANCE[grade][work_experience // 5 - 1] * salary
 
 # calculate the overtime pay if applicable
 if total_work_hours > 40 * 7:
     overtime_hours = total_work_hours - 40 * 7
-    overtime_pay = GRADE_OVERTIME_PAY[grade] * overtime_hours
+    overtime_pay = OVERTIME_PAY * overtime_hours
 else:
     overtime_pay = 0
 
@@ -39,4 +42,4 @@ print("\nPERHITUNGAN GAJI")
 print("Gaji Pokok: ", salary)
 print("Tunjangan: ", allowance)
 print("Lembur: ", overtime_pay)
-print("Total: ", total_salary)
+print("Total: ", total_salary)                                                           
