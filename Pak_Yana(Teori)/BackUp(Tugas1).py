@@ -5,7 +5,7 @@ GRADE_SALARY = {'A': 1000000, 'B': 1500000, 'C': 2000000}
 GRADE_ALLOWANCE = {'A': [0.05, 0.15, 0.25], 'B': [0.15, 0.30, 0.45], 'C': [0.25, 0.35, 0.45]}
 
 # define the overtime pay per hour
-OVERTIME_PAY = {'A': 2000, 'B': 25000, 'C':30000}
+OVERTIME_PAY = {'A': 20000, 'B': 25000, 'C':30000}
 
 # get the input from the user
 name = input("Nama: ")
