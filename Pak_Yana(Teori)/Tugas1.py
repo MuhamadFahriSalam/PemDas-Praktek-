@@ -19,7 +19,7 @@ def gaji_karyawan():
         jam_lembur = total_jam_kerja - 40 * 4
         gaji_lembur = GAJI_LEMBUR_PER_JAM[golongan] * jam_lembur
     else:
-    gaji_lembur = 0
+        gaji_lembur = 0
     # Hitung total gaji
     total_gaji = gaji + tunjangan + gaji_lembur
     # Cetak hasil
