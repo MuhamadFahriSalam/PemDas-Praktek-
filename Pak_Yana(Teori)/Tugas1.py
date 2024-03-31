@@ -20,8 +20,8 @@ salary = GRADE_SALARY[grade]
 allowance = GRADE_ALLOWANCE[grade] * salary
 
 # calculate the overtime pay if applicable
-if total_work_hours > 40 * 7:
-    overtime_hours = total_work_hours - 40 * 7
+if total_work_hours > 40 * 4:
+    overtime_hours = total_work_hours - 40 * 4
     overtime_pay = GRADE_OVERTIME_PAY[grade] * overtime_hours
 else:
     overtime_pay = 0
