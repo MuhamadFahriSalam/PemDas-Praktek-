@@ -14,7 +14,8 @@ def gaji_karyawan():
         gaji_lembur = GAJI_LEMBUR_PER_JAM[golongan] * jam_lembur
     else:
         gaji_lembur = 0
-    total_gaji = gaji + tunjangan + gaji_lembur # Hitung total gaji
+    # Hitung total gaji    
+    total_gaji = gaji + tunjangan + gaji_lembur 
     # Cetak hasil
     print('-' *25) 
     print("{:^20}".format("DATA PEGAWAI"))
