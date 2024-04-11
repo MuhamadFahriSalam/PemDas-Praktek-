@@ -5,19 +5,20 @@ def gaji_karyawan():
      # Dapatkan input dari pengguna
     nama = input("Nama: ") 
     masa_kerja = int(input("Masa Kerja: "))
-    golongan = input("Golongan: ").upper()
+    golongan = input("Golongan(A/B/C): ").upper()
     total_jam_kerja = int(input("Total Jam Kerja: "))
     gaji = GAJI_DASAR[golongan] # Hitung gaji dasar berdasarkan golongan
-    tunjangan = TUNJANGAN_PERS[golongan] * gaji # Hitung tunjangan berdasarkan golongan
+    if masa_kerja < 5 :
+        tunjangan = 0
+    else:
+        tunjangan = TUNJANGAN_PERS[golongan] * gaji # Hitung tunjangan berdasarkan golongan
     if total_jam_kerja > 40 * 4:  # Hitung gaji lembur jika berlaku # 40 jam * 4 minggu
         jam_lembur = total_jam_kerja - 40 * 4
         gaji_lembur = GAJI_LEMBUR_PER_JAM[golongan] * jam_lembur
     else:
-        gaji_lembur = 0
-    # Hitung total gaji    
-    total_gaji = gaji + tunjangan + gaji_lembur 
-    # Cetak hasil
-    print('=' *50) 
+        gaji_lembur = 0   
+    total_gaji = gaji + tunjangan + gaji_lembur # Hitung total gaji 
+    print('=' *50) # Cetak hasil
     print("{:^50}".format("DATA PEGAWAI"))
     print('=' *50)
     print("{:<15}: {:>2}".format("Nama", nama))
