@@ -1,0 +1,5 @@
+nama = input("Masukkan Nama Anda:")
+print(nama)
+print(type(nama),"\n")
+print()
+print("Nama Anda adalah", nama)
