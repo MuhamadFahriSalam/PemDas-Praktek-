@@ -13,7 +13,7 @@ def main():
     print('a - b\t: %d' % modularitmatika.kurang(a, b))
     print('a * b\t: %d' % modularitmatika.kali(a, b))
     print('a // b\t: %d' % modularitmatika.bagi(a, b))
-    print('a / b\t: %d' % modularitmatika.bagi(a, b))
+    print('a / c\t: %d' % modularitmatika.bagi(a, c))
     print('a ** b\t: %d' % modularitmatika.pangkat(a, b))
     
 if __name__ == '__main__':
